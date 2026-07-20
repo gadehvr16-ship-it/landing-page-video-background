@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap">
+<style>
+  html,body{margin:0;padding:0;}
+  a{color:#5b8dff;text-decoration:none;}
+  a:hover{color:#8ab0ff;}
+  *{scrollbar-width:none;-ms-overflow-style:none;}
+  *::-webkit-scrollbar{width:0;height:0;display:none;}
+</style>
+</helmet>
+<div style="position:relative;width:100%;height:100vh;min-height:760px;overflow:hidden;background:#0b0d14;font-family:'Inter',sans-serif;color:#fff;">
+  <div style="position:absolute;inset:0;z-index:0;background-image:url('uploads/pasted-1784465049788-0.png');background-size:cover;background-position:center;"></div>
+  <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg, rgba(6,8,14,0.82) 0%, rgba(6,8,14,0.72) 34%, rgba(6,8,14,0.8) 70%, rgba(6,8,14,0.92) 100%);"></div>
+
+  <!-- Nav -->
+  <nav style="position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; padding: 7px; background: rgba(18,20,30,0.78); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.18); border-radius: 100px; box-shadow: 0 12px 34px rgba(0,0,0,0.45); max-width: min(1400px,97vw); width: 947px; height: 42px;">
+    <a href="Landing Page.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Home</span></a>
+    <div class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;;opacity:0.6;cursor:default;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Experience</span></div>
+    <a href="Projects.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Projects</span></a>
+    <a href="Skills.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8 4 12l5 4"></path><path d="M15 8l5 4-5 4"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Skills</span></a>
+    <a href="Certificate.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:16px;background:#2f6bff;box-shadow:0 6px 16px rgba(47,107,255,0.5);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5 7 21l5-3 5 3-2-8.5"></path></svg><span style="font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;">Certificate</span></a>
+    <a href="Education.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5-10-4.5Z"></path><path d="M6 10.8V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-5.2"></path><path d="M20 9v6.5"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Education</span></a>
+    <a href="Achievements.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Achievements</span></a>
+    <a href="Contact Details.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Contact Details</span></a>
+  </nav>
+
+  <!-- Content -->
+  <div style="position: absolute; left: 0; right: 0; top: 93px; bottom: 28px; z-index: 4; overflow: auto">
+    <div style="width:min(980px,92vw);margin:0 auto;">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:34px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:7px 16px 7px 12px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);">
+          <span style="width:7px;height:7px;border-radius:50%;background:#5b93ff;box-shadow:0 0 10px 1px rgba(91,147,255,0.9);"></span>
+          <span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);">Credentials</span>
+        </div>
+        <h1 style="margin:0;font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-0.02em;line-height:1;">Certifications</h1>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:rgba(255,255,255,0.72);max-width:560px;border-left:2px solid rgba(91,147,255,0.7);padding-left:14px;">Programs I've completed and the ones I'm actively working through.</p>
+      </div>
+
+      <!-- Completed -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);">Completed</span>
+        <span style="font-size:12px;font-weight:600;color:#3ecf7e;background:rgba(62,207,126,0.14);border:1px solid rgba(62,207,126,0.35);border-radius:999px;padding:3px 10px;">3</span>
+        <span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,0.18),transparent);"></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:44px;">
+
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 50px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border-radius:13px;background:rgba(47,107,255,0.16);border:1px solid rgba(47,107,255,0.4);color:#7ea6ff;">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5 7 21l5-3 5 3-2-8.5"></path></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#3ecf7e;background:rgba(62,207,126,0.14);border:1px solid rgba(62,207,126,0.35);border-radius:999px;padding:5px 11px;white-space:nowrap;flex:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Completed
+            </span>
+          </div>
+          <div>
+            <h3 style="margin:0;font-size:19px;font-weight:800;color:#fff;line-height:1.25;">Machine Learning with AI</h3>
+            <div style="font-size:14px;font-weight:600;color:#5b93ff;margin-top:6px;line-height:1.4;">Internshala Trainings · IITM Pravartak Technologies Foundation</div>
+          </div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:auto;">8-week program</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 50px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border-radius:13px;background:rgba(47,107,255,0.16);border:1px solid rgba(47,107,255,0.4);color:#7ea6ff;">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"></path><path d="M12 20V4"></path><path d="M20 20v-7"></path></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#3ecf7e;background:rgba(62,207,126,0.14);border:1px solid rgba(62,207,126,0.35);border-radius:999px;padding:5px 11px;white-space:nowrap;flex:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Completed
+            </span>
+          </div>
+          <div>
+            <h3 style="margin:0;font-size:19px;font-weight:800;color:#fff;line-height:1.25;">Data Analytics Essentials</h3>
+            <div style="font-size:14px;font-weight:600;color:#5b93ff;margin-top:6px;line-height:1.4;">Cisco Networking Academy</div>
+          </div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:auto;">Foundations of data analysis</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 50px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border-radius:13px;background:rgba(47,107,255,0.16);border:1px solid rgba(47,107,255,0.4);color:#7ea6ff;">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"></path><path d="M9.5 12l2 2 3.5-4"></path></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:#3ecf7e;background:rgba(62,207,126,0.14);border:1px solid rgba(62,207,126,0.35);border-radius:999px;padding:5px 11px;white-space:nowrap;flex:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Completed
+            </span>
+          </div>
+          <div>
+            <h3 style="margin:0;font-size:19px;font-weight:800;color:#fff;line-height:1.25;">Autodesk Fusion 360 Certification</h3>
+            <div style="font-size:14px;font-weight:600;color:#5b93ff;margin-top:6px;line-height:1.4;">Autodesk</div>
+          </div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:auto;">CAD &amp; product design</div>
+        </div>
+      </div>
+
+      <!-- Currently pursuing -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);">Currently Pursuing</span>
+        <span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,0.18),transparent);"></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;padding:26px 28px;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 50px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);">
+        <span style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;flex:none;border-radius:15px;background:rgba(255,176,32,0.15);border:1px solid rgba(255,176,32,0.4);color:#ffc65c;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"></path></svg>
+        </span>
+        <div style="flex:1;min-width:260px;">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <h3 style="margin:0;font-size:20px;font-weight:800;color:#fff;line-height:1.25;">Complete Agentic AI Bootcamp — LangGraph &amp; LangChain</h3>
+            <span style="font-size:11.5px;font-weight:600;color:#ffc65c;background:rgba(255,176,32,0.14);border:1px solid rgba(255,176,32,0.4);border-radius:999px;padding:4px 11px;white-space:nowrap;">In Progress</span>
+          </div>
+          <div style="font-size:14px;font-weight:600;color:#5b93ff;margin-top:6px;">Udemy · Krish Naik</div>
+          <div style="margin-top:16px;">
+            <div style="display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:8px;">
+              <span>Progress</span>
+              <span style="font-weight:700;color:#fff;">60%</span>
+            </div>
+            <div style="height:9px;border-radius:999px;background:rgba(255,255,255,0.12);overflow:hidden;">
+              <div style="width:60%;height:100%;border-radius:999px;background:linear-gradient(90deg,#2f6bff,#5b93ff);box-shadow:0 0 12px rgba(47,107,255,0.6);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

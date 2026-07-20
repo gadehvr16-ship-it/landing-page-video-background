@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap">
+<style>
+  html,body{margin:0;padding:0;}
+  a{color:#5b8dff;text-decoration:none;}
+  a:hover{color:#8ab0ff;}
+  *{scrollbar-width:none;-ms-overflow-style:none;}
+  *::-webkit-scrollbar{width:0;height:0;display:none;}
+</style>
+</helmet>
+<div style="position:relative;width:100%;height:100vh;min-height:760px;overflow:hidden;background:#0b0d14;font-family:'Inter',sans-serif;color:#fff;">
+  <div style="position:absolute;inset:0;z-index:0;background-image:url('uploads/pasted-1784465049788-0.png');background-size:cover;background-position:center;"></div>
+  <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(6,8,14,0.82) 0%, rgba(6,8,14,0.72) 34%, rgba(6,8,14,0.8) 70%, rgba(6,8,14,0.92) 100%); left: -41px; top: -105px"></div>
+
+  <!-- Nav -->
+  <nav style="position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; padding: 7px; background: rgba(18,20,30,0.78); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.18); border-radius: 100px; box-shadow: 0 12px 34px rgba(0,0,0,0.45); max-width: min(1400px,97vw); width: 947px; height: 42px;">
+    <a href="Landing Page.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Home</span></a>
+    <div class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;;opacity:0.6;cursor:default;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Experience</span></div>
+    <a href="Projects.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Projects</span></a>
+    <a href="Skills.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8 4 12l5 4"></path><path d="M15 8l5 4-5 4"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Skills</span></a>
+    <a href="Certificate.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5 7 21l5-3 5 3-2-8.5"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Certificate</span></a>
+    <a href="Education.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:16px;background:#2f6bff;box-shadow:0 6px 16px rgba(47,107,255,0.5);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5-10-4.5Z"></path><path d="M6 10.8V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-5.2"></path><path d="M20 9v6.5"></path></svg><span style="font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;">Education</span></a>
+    <a href="Achievements.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Achievements</span></a>
+    <a href="Contact Details.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Contact Details</span></a>
+  </nav>
+
+  <!-- Content -->
+  <div style="position: absolute; left: 0; right: 0; top: 94px; bottom: 30px; z-index: 4; overflow-y: auto; overflow-x: hidden">
+    <div style="width: min(1200px, 95vw); margin: 0 auto;">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:26px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:7px 16px 7px 12px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);">
+          <span style="width:7px;height:7px;border-radius:50%;background:#5b93ff;box-shadow:0 0 10px 1px rgba(91,147,255,0.9);"></span>
+          <span style="font-size:11.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);">Academic Journey</span>
+        </div>
+        <h1 style="margin:0;font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-0.02em;line-height:1;">Education</h1>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:rgba(255,255,255,0.72);max-width:520px;border-left:2px solid rgba(91,147,255,0.7);padding-left:14px;">Pick a qualification to see its details and certificates.</p>
+      </div>
+
+      <!-- Tab buttons -->
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px;">
+        <button onClick="{{ selectBtech }}" style="{{ btechBtn }}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5-10-4.5Z"></path><path d="M6 10.8V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-5.2"></path><path d="M20 9v6.5"></path></svg>
+          B.Tech
+        </button>
+        <button onClick="{{ selectInter }}" style="{{ interBtn }}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+          Inter
+        </button>
+        <button onClick="{{ selectSsc }}" style="{{ sscBtn }}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h8M8 11h8M8 15h5"></path></svg>
+          SSC / 10th
+        </button>
+      </div>
+
+      <!-- Two-column panel: details (left) | certificates (right, scrollable) -->
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-radius:22px;overflow:hidden;background:rgba(255,255,255,0.06);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 50px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.12);align-items:stretch;">
+
+        <!-- LEFT: details -->
+        <div style="padding:34px 34px;display:flex;flex-direction:column;justify-content:flex-start;overflow:auto;">
+          <span style="display:inline-block;align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8fb3ff;background:rgba(47,107,255,0.16);border:1px solid rgba(47,107,255,0.4);border-radius:999px;padding:4px 12px;margin-bottom:18px;">{{ kicker }}</span>
+          <h3 style="margin:0;font-size:26px;font-weight:800;color:#fff;letter-spacing:-0.01em;line-height:1.2;">{{ title }}</h3>
+          <div style="font-size:18px;font-weight:600;color:#5b93ff;margin-top:6px;">{{ institution }}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:18px;font-size:14.5px;color:rgba(255,255,255,0.7);">
+            <span style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 3v3M16 3v3"></path></svg>{{ dates }}</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>{{ location }}</span>
+          </div>
+          <div style="display:inline-flex;align-items:baseline;gap:10px;align-self:flex-start;margin-top:20px;padding:12px 18px;border-radius:14px;background:rgba(47,107,255,0.12);border:1px solid rgba(47,107,255,0.35);">
+            <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.6);">CGPA</span>
+            <span style="font-size:34px;font-weight:800;color:#5b93ff;line-height:1;">{{ cgpa }}<span style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.5);"> / 10</span></span>
+          </div>
+          <p style="margin:20px 0 0;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.66);">{{ blurb }}</p>
+          <div style="margin-top:22px;">
+            <span style="display:block;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:10px;">Campus Photo</span>
+            <div style="position:relative;width:100%;min-width:0;aspect-ratio:16 / 10;border-radius:14px;overflow:hidden;border:1px dashed rgba(255,255,255,0.22);background:rgba(0,0,0,0.28);">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ photoId }}" shape="rect" placeholder="Drop your college / school photo" hint-size="100%,100%"></x-import>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: certificates, scrollable -->
+        <div style="border-left:1px solid rgba(255,255,255,0.12);background:rgba(0,0,0,0.22);display:flex;flex-direction:column;min-width:0;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,0.1);">
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Certificates</span>
+            <span style="font-size:11.5px;color:rgba(255,255,255,0.5);">Scroll for more</span>
+          </div>
+          <div style="flex:1;min-width:0;height:800px;overflow-x:auto;overflow-y:hidden;padding:22px;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:18px;">
+            <sc-for list="{{ certs }}" as="cert" hint-placeholder-count="2">
+              <div style="position:relative;flex:none;height:100%;min-height:0;aspect-ratio:1 / 1.414;border-radius:12px;overflow:hidden;border:1px dashed rgba(255,255,255,0.22);background:rgba(0,0,0,0.3);">
+                <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="{{ cert.id }}" shape="rect" placeholder="{{ cert.label }}" hint-size="100%,100%"></x-import>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid rgba(255,255,255,0.1);">
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.8);">Certificates</span>
+            <span style="font-size:11.5px;color:rgba(255,255,255,0.5);">Scroll for more</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sel: 'btech' };
+  DATA = {
+    btech: {
+      kicker: 'Degree', title: 'Bachelor of Technology', institution: 'MLR Institute of Technology',
+      dates: 'Nov 2022 – Jun 2026', location: 'Hyderabad, India', cgpa: '6.65',
+      blurb: 'Four-year engineering degree with hands-on project and competition work alongside coursework.',
+      certs: [
+        { id: 'edu-btech-1', label: 'Drop B.Tech marksheet / degree certificate' },
+      ],
+    },
+    inter: {
+      kicker: 'Intermediate', title: 'Intermediate', institution: 'Narayana Junior College',
+      dates: 'Jun 2019 – Jun 2021', location: 'Hyderabad, India', cgpa: '6.2',
+      blurb: 'Higher-secondary education in the MPC stream.',
+      certs: [
+        { id: 'edu-inter-1', label: 'Drop Intermediate marksheet / certificate' },
+      ],
+    },
+    ssc: {
+      kicker: 'School', title: 'SSC / 10th', institution: 'Sri Gujarati Vidya Mandir High School, Koti',
+      dates: 'Jun 2018 – Jun 2019', location: 'Hyderabad, India', cgpa: '6.8',
+      blurb: 'Secondary School Certificate.',
+      certs: [
+        { id: 'edu-ssc-1', label: 'Drop SSC / 10th marksheet / certificate' },
+      ],
+    },
+  };
+  btnStyle(active) {
+    const base = "display:inline-flex;align-items:center;gap:9px;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;padding:12px 22px;border-radius:12px;cursor:pointer;transition:all 0.15s ease;";
+    return active
+      ? base + "background:linear-gradient(180deg,#3f7dff,#2f6bff);color:#fff;border:1px solid rgba(255,255,255,0.2);box-shadow:0 10px 24px rgba(47,107,255,0.5);"
+      : base + "background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.18);";
+  }
+  renderVals() {
+    const sel = this.state.sel;
+    const c = this.DATA[sel];
+    return {
+      selectBtech: () => this.setState({ sel: 'btech' }),
+      selectInter: () => this.setState({ sel: 'inter' }),
+      selectSsc: () => this.setState({ sel: 'ssc' }),
+      btechBtn: this.btnStyle(sel === 'btech'),
+      interBtn: this.btnStyle(sel === 'inter'),
+      sscBtn: this.btnStyle(sel === 'ssc'),
+      kicker: c.kicker, title: c.title, institution: c.institution,
+      dates: c.dates, location: c.location, cgpa: c.cgpa, blurb: c.blurb,
+      certs: c.certs, photoId: 'edu-' + sel + '-photo',
+    };
+  }
+}
+</script>
+</body>
+</html>

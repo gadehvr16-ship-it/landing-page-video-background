@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/nocturne-6bb8d197-720e-4ee0-b8f2-d9ebe632143d/styles.css">
+  <script src="_ds/nocturne-6bb8d197-720e-4ee0-b8f2-d9ebe632143d/_ds_bundle.js"></script>
+  <style>
+    deck-stage section{background:var(--color-bg);color:var(--color-text);}
+    .kicker{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-300);font-weight:600;margin:0 0 18px}
+    .card{background:var(--color-surface);border:1px solid var(--color-neutral-800);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+    .stat-num{font-family:var(--font-heading);font-size:44px;color:var(--color-text);font-weight:500;letter-spacing:-0.01em}
+    .stat-label{font-size:15px;color:var(--color-neutral-400);margin-top:6px}
+    figcaption.cap{font-size:15px;color:var(--color-neutral-400);margin-top:12px}
+  </style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Cover" data-speaker-notes="Frame AIRAVAT as a product design case study, not a competition report." style="position:relative;background:radial-gradient(120% 100% at 15% 10%, #1c1f33 0%, var(--color-bg) 55%);display:flex;flex-direction:column;justify-content:center;padding:140px 150px;">
+  <div style="position:absolute;top:80px;right:150px;font-size:16px;color:var(--color-neutral-500);letter-spacing:.08em;">SAE DDC2024013 &nbsp;·&nbsp; MLR INSTITUTE OF TECHNOLOGY</div>
+  <div class="kicker">Product Design Case Study</div>
+  <h1 style="font-size:150px;margin:0 0 28px;line-height:0.95;">AIRAVAT</h1>
+  <p style="font-size:28px;max-width:1100px;color:var(--color-neutral-300);margin:0;">Engineering a high-payload, regular-class UAV — from research through a validated, flight-ready design.</p>
+  <div style="position:absolute;bottom:90px;left:150px;right:150px;display:flex;justify-content:space-between;border-top:1px solid var(--color-divider);padding-top:24px;font-size:16px;color:var(--color-neutral-500);">
+    <span>A design &amp; engineering narrative</span>
+    <span>Team AIRAVAT</span>
+  </div>
+</section>
+
+<section data-label="Contents" data-speaker-notes="Set up the six-stage design process arc used to structure the deck." style="position:relative;padding:110px 150px;display:grid;grid-template-columns:0.85fr 1.15fr;gap:90px;align-items:center;overflow:hidden;">
+  <div style="position:absolute;top:-220px;left:-220px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle, var(--color-accent-900) 0%, transparent 70%);opacity:.6;"></div>
+  <div style="position:relative;">
+    <div class="kicker">Contents</div>
+    <h2 style="font-size:60px;line-height:1.05;margin-bottom:24px;">A six-stage<br>design process</h2>
+    <p style="font-size:20px;color:var(--color-neutral-400);max-width:480px;line-height:1.6;">Every slide that follows sits on this arc — from the original brief through to a validated, build-ready airframe.</p>
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;">
+    <div style="position:absolute;left:29px;top:14px;bottom:14px;width:1px;background:linear-gradient(var(--color-bg), var(--color-neutral-700) 15%, var(--color-neutral-700) 85%, var(--color-bg));"></div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-accent);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-accent-300);background:var(--color-bg);position:relative;z-index:1;">01</span>
+      <div><div style="font-size:26px;">Problem</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">The design brief and its constraints</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-neutral-400);background:var(--color-bg);position:relative;z-index:1;">02</span>
+      <div><div style="font-size:26px;">Research</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">Literature, benchmarking, airfoil selection</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-neutral-400);background:var(--color-bg);position:relative;z-index:1;">03</span>
+      <div><div style="font-size:26px;">Iterate</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">Wing, fuselage, tail, gear and propulsion</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-neutral-400);background:var(--color-bg);position:relative;z-index:1;">04</span>
+      <div><div style="font-size:26px;">Test</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">CAD, structural and CFD simulation</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-neutral-400);background:var(--color-bg);position:relative;z-index:1;">05</span>
+      <div><div style="font-size:26px;">Validate</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">Weight build-up against the target</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;">
+      <span style="flex:none;width:60px;height:60px;border-radius:50%;border:1px solid var(--color-neutral-700);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--color-neutral-400);background:var(--color-bg);position:relative;z-index:1;">06</span>
+      <div><div style="font-size:26px;">Result</div><div style="font-size:16px;color:var(--color-neutral-500);margin-top:4px;">What shipped, and what made it work</div></div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Divider 01" data-speaker-notes="Section divider: the problem statement." style="background:radial-gradient(120% 120% at 80% 20%, var(--color-section-glow) 0%, var(--color-section) 60%);display:flex;flex-direction:column;justify-content:center;padding:0 150px;">
+  <div style="font-size:220px;color:var(--color-neutral-200);opacity:.3;font-family:var(--font-heading);line-height:1;">01</div>
+  <h1 style="font-size:96px;margin-top:-16px;color:var(--color-neutral-100);">Problem</h1>
+</section>
+
+<section data-label="Problem Brief" data-speaker-notes="State the design brief and the constraints that shaped every downstream decision." style="padding:110px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Design Brief</div>
+  <h2 style="font-size:52px;max-width:1400px;margin-bottom:20px;">Design and fabricate a regular-class aircraft with high payload capacity and superior aerodynamic efficiency.</h2>
+  <p style="font-size:22px;color:var(--color-neutral-400);max-width:1100px;margin-bottom:56px;">Built for SAE India's Design, Development &amp; Competition 2024 — every configuration choice traces back to this brief.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="card" style="padding:32px;">
+      <div class="stat-num">8.985 kg</div>
+      <div class="stat-label">Gross take-off weight target</div>
+    </div>
+    <div class="card" style="padding:32px;">
+      <div class="stat-num">5.0 kg</div>
+      <div class="stat-label">Payload carried, ~56% of GTOW</div>
+    </div>
+    <div class="card" style="padding:32px;">
+      <div class="stat-num">1.8 m</div>
+      <div class="stat-label">Wingspan constraint</div>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does an 8.985 kg aircraft carrying a 5 kg payload matter?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Like a delivery van judged by cargo per trip, a UAV is judged by payload per flight; the higher that fraction, the more revenue or utility each battery charge earns.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Business" data-speaker-notes="A plain-language slide on who this is for, kept simple: three uses, one line on why it's affordable to build and fix." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Where It's Used</div>
+  <h2 style="font-size:48px;margin-bottom:48px;max-width:1400px;">Built to carry a heavy payload, cheaply.</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:40px;">
+    <div class="card" style="padding:36px;text-align:center;">
+      <div style="font-size:22px;margin-bottom:10px;">Crop spraying</div>
+      <div style="font-size:17px;color:var(--color-neutral-400);">Carries a 5 kg tank over fields</div>
+    </div>
+    <div class="card" style="padding:36px;text-align:center;">
+      <div style="font-size:22px;margin-bottom:10px;">Cargo delivery</div>
+      <div style="font-size:17px;color:var(--color-neutral-400);">Stable takeoffs for repeat short hops</div>
+    </div>
+    <div class="card" style="padding:36px;text-align:center;">
+      <div style="font-size:22px;margin-bottom:10px;">Aerial mapping</div>
+      <div style="font-size:17px;color:var(--color-neutral-400);">Efficient wing means longer flights</div>
+    </div>
+  </div>
+  <p style="font-size:19px;color:var(--color-neutral-400);max-width:1300px;line-height:1.6;border-top:1px solid var(--color-divider);padding-top:28px;">Wood-and-aluminum construction keeps it cheap to build, and one 3D-printed part carries the wing, gear and payload — so a hard landing means reprinting one piece, not rebuilding the aircraft.</p>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does matching the airframe to real jobs matter?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">A design with no named buyer or use case is just a science project; spelling out spraying, delivery, and mapping turns an engineering exercise into something someone would actually purchase and operate.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="What It Can Do" data-speaker-notes="Plain-language capability stats and the 30% cost claim vs comparable UAVs, then a simple explanation of what makes AIRAVAT different." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">What It Can Do</div>
+  <h2 style="font-size:48px;margin-bottom:44px;max-width:1400px;">Small runway, big payload, real maneuverability.</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:44px;">
+    <div class="card" style="padding:30px;">
+      <div class="stat-num" style="font-size:26px;">Short runway</div>
+      <div class="stat-label">Takes off and lands in tight spaces</div>
+    </div>
+    <div class="card" style="padding:30px;">
+      <div class="stat-num" style="font-size:26px;">High cargo</div>
+      <div class="stat-label">Carries a heavy payload for its size</div>
+    </div>
+    <div class="card" style="padding:30px;">
+      <div class="stat-num" style="font-size:26px;">18 min</div>
+      <div class="stat-label">Maximum time airborne</div>
+    </div>
+    <div class="card" style="padding:30px;">
+      <div class="stat-num" style="font-size:26px;">Highly agile</div>
+      <div class="stat-label">Excellent maneuverability in flight</div>
+    </div>
+  </div>
+  <div class="card" style="padding:36px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;">
+    <div><div class="stat-num" style="font-size:56px;color:var(--color-accent-300);">30%</div><div class="stat-label">lower cost than comparable UAVs</div></div>
+    <p style="font-size:19px;color:var(--color-neutral-300);margin:0;line-height:1.6;border-left:1px solid var(--color-divider);padding-left:36px;">In simple terms: most UAVs trade payload for either range or price. AIRAVAT keeps the payload high while using cheaper wood-and-aluminum construction and one multi-purpose printed part instead of many custom ones — so it costs less to build and less to fix, without giving up carrying capacity or control.</p>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does a 30% cost edge matter more than raw performance?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">In commercial fleets, cost per flight hour, not top-line specs, decides whether operators can afford to scale from one drone to a hundred.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Divider 02" data-speaker-notes="Section divider: research and benchmarking." style="background:radial-gradient(120% 120% at 80% 20%, var(--color-section-glow) 0%, var(--color-section) 60%);display:flex;flex-direction:column;justify-content:center;padding:0 150px;">
+  <div style="font-size:220px;color:var(--color-neutral-200);opacity:.3;font-family:var(--font-heading);line-height:1;">02</div>
+  <h1 style="font-size:96px;margin-top:-16px;color:var(--color-neutral-100);">Research</h1>
+</section>
+
+<section data-label="Research Literature" data-speaker-notes="Literature review pointed to dihedral wings for lateral stability under heavy payload; referenced against a large dihedral commercial airframe." style="padding:110px 150px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;">
+  <div>
+    <div class="kicker">Literature Survey</div>
+    <h2 style="font-size:46px;margin-bottom:28px;">Dihedral wings carry payload and stay stable.</h2>
+    <p style="font-size:21px;color:var(--color-neutral-300);line-height:1.6;">Dihedral wing geometry was identified as the configuration best suited to a high payload fraction while remaining aerodynamically stable. Raising the wingtips improves lateral stability and payload margin, at the cost of higher structural loads at the root chord — the trade-off that shaped our wing engineering.</p>
+  </div>
+  <figure>
+    <img src="assets/image9.jpeg" style="width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);" alt="Wide-body aircraft with dihedral wings on a runway">
+    <figcaption class="cap">Fig. 1 — Reference airframe with pronounced wing dihedral</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why study an existing commercial airframe before designing your own?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Dihedral wings have carried heavy loads safely on production aircraft for decades; borrowing that proven principle avoids re-learning a stability lesson the industry already paid for.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Airfoil Geometry" data-speaker-notes="Compare the baseline Wortmann FX63-137 airfoil against our modified profile." style="padding:110px 150px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+  <div>
+    <div class="kicker">Airfoil Selection</div>
+    <h2 style="font-size:46px;margin-bottom:24px;">Modifying a proven profile for more lift.</h2>
+    <p style="font-size:21px;color:var(--color-neutral-300);line-height:1.6;margin-bottom:32px;">The Wortmann FX 63-137 airfoil was chosen for its lift characteristics, then reshaped further — thickening camber and adjusting the trailing edge — for better values across the board.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+      <div class="card" style="padding:22px;">
+        <div class="stat-label" style="margin:0 0 8px;">Cl max</div>
+        <div class="stat-num" style="font-size:32px;">2.148</div>
+        <div class="stat-label">vs 1.8 baseline</div>
+      </div>
+      <div class="card" style="padding:22px;">
+        <div class="stat-label" style="margin:0 0 8px;">Cl / Cd max</div>
+        <div class="stat-num" style="font-size:32px;">96.1</div>
+        <div class="stat-label">vs 95.58 baseline</div>
+      </div>
+      <div class="card" style="padding:22px;">
+        <div class="stat-label" style="margin:0 0 8px;">Stall AOA</div>
+        <div class="stat-num" style="font-size:32px;">13.5°</div>
+        <div class="stat-label">vs 15° baseline</div>
+      </div>
+    </div>
+  </div>
+  <figure class="card" style="padding:32px;">
+    <img src="assets/image10.jpeg" style="width:100%;border-radius:var(--radius-md);" alt="Overlaid geometry of Wortmann and modified Wortmann airfoils">
+    <figcaption class="cap">Fig. 2 — Modified Wortmann (blue) vs. Wortmann FX 63-137 (magenta)</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does a higher Cl max matter?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">More lift per unit of wing area means a smaller, lighter wing can carry the same payload, directly cutting drag, material cost, and build time.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Airfoil Performance" data-speaker-notes="Polar plots confirm the modified airfoil outperforms the baseline across Cl, Cd, and Cl/Cd vs alpha." style="padding:110px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Airfoil Selection</div>
+  <h2 style="font-size:46px;margin-bottom:36px;">Performance holds up across the polar.</h2>
+  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;">
+    <figure class="card" style="padding:28px;background:#f3f5fe;">
+      <img src="assets/image11.png" style="width:100%;border-radius:var(--radius-md);" alt="Cl vs Cd, Cl vs alpha, and Cl/Cd vs alpha polar comparison">
+    </figure>
+    <p style="font-size:21px;color:var(--color-neutral-300);line-height:1.65;">Across drag polar, lift curve, and lift-to-drag ratio, the modified profile (blue) tracks above the Wortmann FX 63-137 baseline (magenta) through the working angle-of-attack range — the basis for carrying it into the full wing design.</p>
+  </div>
+  <figcaption class="cap" style="margin-top:20px;">Fig. 3 — Comparison of Wortmann airfoil characteristics, panel test data</figcaption>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why check performance across the whole angle-of-attack range, not just one number?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">A real flight climbs, cruises, and banks at different angles; an airfoil that only wins at one angle can quietly underperform, or stall, the moment conditions change.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Divider 03" data-speaker-notes="Section divider: iterating the airframe configuration." style="background:radial-gradient(120% 120% at 80% 20%, var(--color-section-glow) 0%, var(--color-section) 60%);display:flex;flex-direction:column;justify-content:center;padding:0 150px;">
+  <div style="font-size:220px;color:var(--color-neutral-200);opacity:.3;font-family:var(--font-heading);line-height:1;">03</div>
+  <h1 style="font-size:96px;margin-top:-16px;color:var(--color-neutral-100);">Iterate</h1>
+</section>
+
+<section data-label="Wing Configuration" data-speaker-notes="Hybrid rectangular-dihedral wing: 3 degrees of dihedral starting at 60% span." style="padding:110px 150px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+  <div>
+    <div class="kicker">Wing Configuration</div>
+    <h2 style="font-size:46px;margin-bottom:24px;">A hybrid rectangular-dihedral wing.</h2>
+    <p style="font-size:21px;color:var(--color-neutral-300);line-height:1.6;margin-bottom:32px;">A 3° dihedral angle begins after 60% of the wing, keeping the inner wing rectangular for structural simplicity while the outer section delivers the roll stability a heavy payload demands.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div class="card" style="padding:20px 24px;"><div class="stat-num" style="font-size:28px;">1.8 m</div><div class="stat-label">Wingspan</div></div>
+      <div class="card" style="padding:20px 24px;"><div class="stat-num" style="font-size:28px;">0.579 m²</div><div class="stat-label">Surface area</div></div>
+      <div class="card" style="padding:20px 24px;"><div class="stat-num" style="font-size:28px;">5.6</div><div class="stat-label">Aspect ratio</div></div>
+      <div class="card" style="padding:20px 24px;"><div class="stat-num" style="font-size:28px;">88.3 N</div><div class="stat-label">Generated lift</div></div>
+    </div>
+  </div>
+  <figure class="card" style="padding:32px;background:#eef0fa;">
+    <img src="assets/image25.jpeg" style="width:100%;border-radius:var(--radius-md);" alt="CAD detail of the wing dihedral root joint">
+    <figcaption class="cap" style="color:#4a4d5c;">Fig. 4 — Dihedral break joint, internal wing structure</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does the dihedral angle matter for an uncrewed aircraft?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Dihedral is a passive, mechanical way to keep the aircraft self-righting in roll, critical when there is no pilot on board to correct a wing drop.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Dihedral Experiments" data-speaker-notes="Swept the dihedral break position from 0.5m to 0.85m along the span and measured lift/drag to pick 0.6m." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Wing Configuration — Iteration</div>
+  <h2 style="font-size:44px;margin-bottom:12px;">Finding the dihedral break point.</h2>
+  <p style="font-size:20px;color:var(--color-neutral-300);max-width:1300px;margin-bottom:36px;">Lift and drag were simulated for dihedral sections starting at seven span positions. At 0.60 m, drag and lift both ease slightly, but roll stability improves — an acceptable trade at this aircraft's low flight speeds.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+    <figure class="card" style="padding:24px;background:#fff;">
+      <img src="assets/image18.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Lift vs dihedral angle for various dihedral section positions">
+    </figure>
+    <figure class="card" style="padding:24px;background:#fff;">
+      <img src="assets/image19.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Parasite drag vs dihedral angle for various dihedral section positions">
+    </figure>
+  </div>
+  <figcaption class="cap" style="margin-top:16px;">Fig. 5–6 — Lift and drag response across dihedral section positions from 0.50 m to 0.85 m along the span</figcaption>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why simulate seven different break points instead of picking one by eye?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Guessing a structural break point risks locking in a wing that is either too weak at the root or unnecessarily draggy; testing the range finds the true best trade-off.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Fuselage and Empennage" data-speaker-notes="Rectangular fuselage for manufacturability; V-tail for maneuverability and lower drag/weight." style="padding:110px 150px;display:grid;grid-template-columns:1fr 1fr;gap:64px;">
+  <div>
+    <div class="kicker">Fuselage Configuration</div>
+    <h3 style="font-size:32px;margin-bottom:16px;">Rectangular, semi-monocoque.</h3>
+    <p style="font-size:19px;color:var(--color-neutral-300);line-height:1.6;margin-bottom:28px;">A rectangular cross-section was chosen for manufacturing feasibility — it also gives the aircraft more lift while experiencing less drag than a rounded shell.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:26px;">1.2 m</div><div class="stat-label">Fuselage length</div></div>
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:22px;">Box section</div><div class="stat-label">Cross-section type</div></div>
+    </div>
+  </div>
+  <div>
+    <div class="kicker">Empennage Configuration</div>
+    <h3 style="font-size:32px;margin-bottom:16px;">V-tail for less drag, more control.</h3>
+    <p style="font-size:19px;color:var(--color-neutral-300);line-height:1.6;margin-bottom:28px;">A V-tail (ruddervator) configuration raises maneuverability while cutting friction drag and tail weight versus a conventional tail.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:26px;">0.24 m</div><div class="stat-label">Vertical stabilizer chord</div></div>
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:26px;">0.42 m</div><div class="stat-label">Horizontal stabilizer chord</div></div>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does the tail design matter as much as the wing?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Every gram and every unit of drag on the tail is subtracted from the payload and flight-time budget of every single flight; a V-tail buys back both.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Landing Gear and Mount" data-speaker-notes="Tricycle landing gear with tail-dragger for takeoff AOA; a single 3D-printed bulkhead carries wing, gear, and payload." style="padding:110px 150px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+  <div>
+    <div class="kicker">Landing Gear &amp; Wing Mount</div>
+    <h2 style="font-size:44px;margin-bottom:20px;">One part, three jobs.</h2>
+    <p style="font-size:20px;color:var(--color-neutral-300);line-height:1.6;margin-bottom:28px;">Tricycle gear was preferred for takeoff and landing stability; a tail-dragger adds the angle of attack needed prior to takeoff. A single 3D-printed bulkhead then does triple duty — carrying the wing at top, gear at bottom, and the payload bay at its center.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:26px;">830 mm</div><div class="stat-label">Wheelbase</div></div>
+      <div class="card" style="padding:18px 22px;"><div class="stat-num" style="font-size:26px;">9.54°</div><div class="stat-label">Ground angle of attack</div></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <figure class="card" style="padding:24px;background:#eef0fa;">
+      <img src="assets/image27.jpeg" style="width:100%;border-radius:var(--radius-md);" alt="CAD model of the tricycle landing gear leg">
+      <figcaption class="cap" style="color:#4a4d5c;">Fig. 7 — Landing gear leg</figcaption>
+    </figure>
+    <figure class="card" style="padding:24px;background:#eef0fa;">
+      <img src="assets/image28.png" style="width:100%;border-radius:var(--radius-md);" alt="CAD model of the 3D-printed wing-mount bulkhead">
+      <figcaption class="cap" style="color:#4a4d5c;">Fig. 8 — 3D-printed mounting bulkhead</figcaption>
+    </figure>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does combining three jobs into one printed part matter?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Fewer parts and joints mean fewer places to fail on a rough landing, and a damaged bulkhead can be reprinted overnight instead of rebuilding the whole airframe.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Propulsion System" data-speaker-notes="380KV motor with 22x10E propeller on a 6S pack; propeller pairing selected from manufacturer efficiency data." style="padding:70px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Propulsive System</div>
+  <h2 style="font-size:40px;margin-bottom:10px;">Motor and propeller, matched by data.</h2>
+  <p style="font-size:19px;color:var(--color-neutral-300);max-width:1300px;margin-bottom:20px;">A battery-powered 380 KV motor turns a 22×10E propeller at the nose. The pairing was read directly off the manufacturer's thrust, RPM, and efficiency curves rather than assumed.</p>
+  <figure class="card" style="padding:16px;max-width:620px;margin:0;">
+    <img src="assets/image30.jpeg" style="width:100%;border-radius:var(--radius-md);" alt="Motor specification sheet showing efficiency, thrust, and RPM curves">
+    <figcaption class="cap">Fig. 9 — XM6360EA-11 (380 KV) performance data at 22.2 V</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why match the motor and propeller from data instead of a rule of thumb?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">A mismatched pair wastes battery charge as heat and noise instead of thrust, directly shortening the aircraft's already-tight 18-minute flight window.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Innovation" data-speaker-notes="Call out the four decisions that make this airframe distinctive, not just compliant." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Innovation</div>
+  <h2 style="font-size:46px;margin-bottom:36px;max-width:1400px;">Four decisions that set this airframe apart.</h2>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+    <div class="card" style="padding:32px;">
+      <h3 style="font-size:24px;margin-bottom:10px;">A reshaped airfoil, not a stock one</h3>
+      <p style="font-size:18px;color:var(--color-neutral-300);line-height:1.6;">The Wortmann FX 63-137 was re-profiled for +19% Cl max and a higher Cl/Cd — gains earned through iteration, not catalog selection.</p>
+    </div>
+    <div class="card" style="padding:32px;">
+      <h3 style="font-size:24px;margin-bottom:10px;">A dihedral break point tuned by data</h3>
+      <p style="font-size:18px;color:var(--color-neutral-300);line-height:1.6;">Seven span positions were simulated to find 0.60 m — the point where roll stability improves at a drag cost the low-speed mission can absorb.</p>
+    </div>
+    <div class="card" style="padding:32px;">
+      <h3 style="font-size:24px;margin-bottom:10px;">A V-tail doing a T-tail's job for less</h3>
+      <p style="font-size:18px;color:var(--color-neutral-300);line-height:1.6;">Ruddervators combine rudder and elevator into two surfaces, cutting friction drag and tail weight while keeping full maneuverability.</p>
+    </div>
+    <div class="card" style="padding:32px;">
+      <h3 style="font-size:24px;margin-bottom:10px;">One printed part, three structural roles</h3>
+      <p style="font-size:18px;color:var(--color-neutral-300);line-height:1.6;">A single 3D-printed bulkhead carries the wing, the landing gear, and the payload bay — fewer joints, less weight, simpler assembly.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why call these four decisions out on their own slide?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">These are the choices a buyer or investor will ask to defend; showing they were deliberate trade-offs, not defaults, is what separates a product from a prototype.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Divider 04" data-speaker-notes="Section divider: testing and validating the design in simulation." style="background:radial-gradient(120% 120% at 80% 20%, var(--color-section-glow) 0%, var(--color-section) 60%);display:flex;flex-direction:column;justify-content:center;padding:0 150px;">
+  <div style="font-size:220px;color:var(--color-neutral-200);opacity:.3;font-family:var(--font-heading);line-height:1;">04</div>
+  <h1 style="font-size:96px;margin-top:-16px;color:var(--color-neutral-100);">Test</h1>
+</section>
+
+<section data-label="Final Assembly" data-speaker-notes="Full CAD assembly modeled in SolidWorks 2023, bringing wing, tail, empennage and fuselage together." style="padding:90px 150px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+  <div class="kicker" style="align-self:flex-start;">Modelling</div>
+  <h2 style="font-size:44px;align-self:flex-start;margin-bottom:32px;">The complete airframe, assembled.</h2>
+  <figure class="card" style="padding:24px;background:#eef0fa;max-width:1000px;">
+    <img src="assets/image32.jpeg" style="width:100%;border-radius:var(--radius-md);" alt="Final CAD assembly of the UAV in SolidWorks">
+    <figcaption class="cap" style="color:#4a4d5c;text-align:center;">Fig. 10 — Final assembly CAD model, modeled in SolidWorks 2023</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why model the full assembly before cutting any material?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">This is where a wing spar colliding with the payload bay, or a servo fouling the landing gear, gets caught on a screen, instead of on the workbench after the parts are already built.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Structural Analysis" data-speaker-notes="Static structural analysis in Ansys compared flange vs spar wing structures and tested landing gear drop impact." style="padding:110px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Structural Analysis</div>
+  <h2 style="font-size:46px;margin-bottom:32px;">Two structures, stress-tested in Ansys.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+    <div class="card" style="padding:36px;">
+      <h3 style="font-size:26px;margin-bottom:14px;">Wing structure</h3>
+      <p style="font-size:19px;color:var(--color-neutral-300);line-height:1.6;">Flange and spar wing structures were tested under identical loading in Ansys Mechanical, comparing deflection and stress at maximum wing loading to select the stiffer, lighter option.</p>
+    </div>
+    <div class="card" style="padding:36px;">
+      <h3 style="font-size:26px;margin-bottom:14px;">Landing gear drop test</h3>
+      <p style="font-size:19px;color:var(--color-neutral-300);line-height:1.6;">A drop test at 14 m/s in SolidWorks evaluated impact deformation across three touch-down angles — 130°, 135°, and 140° — to validate gear survivability.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px;">
+    <div class="card" style="padding:24px 28px;"><div class="stat-num" style="font-size:26px;">Balsa wood</div><div class="stat-label">Primary structure material</div></div>
+    <div class="card" style="padding:24px 28px;"><div class="stat-num" style="font-size:26px;">Aluminum 1060</div><div class="stat-label">Fittings and hardware</div></div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why simulate structural failure instead of just building and testing it?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">A wing or gear failure in flight is expensive and dangerous; running the drop test and load case in software finds the breaking point safely, before it happens for real.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="CFD Mesh" data-speaker-notes="Ansys Fluent mesh generation ahead of 2D airfoil and 3D wing flow analysis." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Flow Analysis — Airfoil</div>
+  <h2 style="font-size:44px;margin-bottom:12px;">A fine mesh around the modified profile.</h2>
+  <p style="font-size:20px;color:var(--color-neutral-300);max-width:1300px;margin-bottom:32px;">The modified Wortmann airfoil was meshed with tetrahedral elements at linear order, dense enough at the leading and trailing edges to resolve flow separation in the pressure and velocity solves that follow.</p>
+  <figure class="card" style="padding:20px;max-width:1150px;background:#e7e9ee;">
+    <img src="assets/image44.png" style="width:100%;border-radius:var(--radius-md);" alt="Tetrahedral CFD mesh around the airfoil leading edge">
+    <figcaption class="cap" style="color:#4a4d5c;">Fig. 11 — Finely generated mesh around the airfoil, Ansys Fluent 2023 R1</figcaption>
+  </figure>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does mesh quality matter before running any flow simulation?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">A coarse mesh can smooth over the exact spot where airflow separates and lift collapses; the simulation is only as trustworthy as the mesh feeding it.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Pressure Contours" data-speaker-notes="Pressure contours across three angles of attack show how lift is generated." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Flow Analysis — Pressure</div>
+  <h2 style="font-size:44px;margin-bottom:12px;">Pressure difference is what generates lift.</h2>
+  <p style="font-size:20px;color:var(--color-neutral-300);max-width:1300px;margin-bottom:32px;">Low pressure over the upper surface and high pressure beneath grow more pronounced as angle of attack increases from 0° to 13° — the pressure differential the wing rides on.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <figure class="card" style="padding:16px;background:#111;"><img src="assets/image45.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Pressure contour at 0 degrees angle of attack"><figcaption class="cap">Fig. 12 — 0° AOA</figcaption></figure>
+    <figure class="card" style="padding:16px;background:#111;"><img src="assets/image46.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Pressure contour at 5 degrees angle of attack"><figcaption class="cap">Fig. 13 — 5° AOA</figcaption></figure>
+    <figure class="card" style="padding:16px;background:#111;"><img src="assets/image47.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Pressure contour at 13 degrees angle of attack"><figcaption class="cap">Fig. 14 — 13° AOA</figcaption></figure>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why visualize pressure instead of just quoting a lift number?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">It shows exactly where on the wing lift is being generated and how that shifts as angle of attack rises; the same picture reveals a stall coming before it happens.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Velocity and Lift Drag" data-speaker-notes="Velocity contours plus the lift/drag numbers pulled from Fluent at 11.5 m/s across three angles of attack." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Flow Analysis — Velocity &amp; Performance</div>
+  <h2 style="font-size:44px;margin-bottom:28px;">Lift climbs faster than drag through the sweep.</h2>
+  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <figure class="card" style="padding:14px;background:#111;"><img src="assets/image48.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Velocity contour at 0 degrees angle of attack"><figcaption class="cap">0° AOA</figcaption></figure>
+      <figure class="card" style="padding:14px;background:#111;"><img src="assets/image49.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Velocity contour at 5 degrees angle of attack"><figcaption class="cap">5° AOA</figcaption></figure>
+      <figure class="card" style="padding:14px;background:#111;"><img src="assets/image50.jpg" style="width:100%;border-radius:var(--radius-md);" alt="Velocity contour at 13 degrees angle of attack"><figcaption class="cap">13° AOA</figcaption></figure>
+    </div>
+    <div class="card" style="padding:32px;">
+      <div class="stat-label" style="margin-bottom:16px;">Wing, at 11.5 m/s</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-divider);padding-bottom:10px;"><span style="color:var(--color-neutral-400);">5° AOA</span><span>61.8 N lift · 5.2 N drag</span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--color-divider);padding-bottom:10px;"><span style="color:var(--color-neutral-400);">10° AOA</span><span>80.2 N lift · 8.7 N drag</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:var(--color-neutral-400);">13° AOA</span><span>88.0 N lift · 11.1 N drag</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why track lift and drag together instead of lift alone?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Lift that costs too much drag burns battery faster; efficiency, not raw lift, is what protects the aircraft's 18-minute flight window.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Weight Build-up" data-speaker-notes="Validate the design against the target: every subsystem's weight rolls up to the gross take-off weight." style="padding:100px 150px;display:flex;flex-direction:column;justify-content:center;">
+  <div class="kicker">Validate</div>
+  <h2 style="font-size:46px;margin-bottom:36px;">The build-up closes at 8.985 kg gross.</h2>
+  <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">Battery</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:10%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>900 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">Motor</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:7%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>650 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">Servos ×4</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:2.2%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>200 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">Landing gear</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:3.3%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>300 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">Structure</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:16.7%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>1500 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-neutral-400);">ESC + prop + misc.</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:4.5%;background:var(--color-accent);height:100%;border-radius:4px;"></div></div><span>407 g</span></div>
+      <div style="display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:16px;"><span style="color:var(--color-accent-300);">Payload</span><div style="background:var(--color-neutral-800);border-radius:4px;height:14px;"><div style="width:55.7%;background:var(--color-accent-300);height:100%;border-radius:4px;"></div></div><span>5000 g</span></div>
+    </div>
+    <div class="card" style="padding:36px;display:flex;flex-direction:column;gap:24px;">
+      <div><div class="stat-num">3.985 kg</div><div class="stat-label">Empty weight</div></div>
+      <div style="border-top:1px solid var(--color-divider);padding-top:24px;"><div class="stat-num">8.985 kg</div><div class="stat-label">Gross take-off weight</div></div>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;padding:20px 26px;border-top:1px solid var(--color-divider);display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-300);width:150px;padding-top:2px;">Why it matters</div>
+    <div>
+      <div style="font-size:16px;color:var(--color-neutral-200);font-style:italic;margin-bottom:4px;">Why does a precise weight build-up matter?</div>
+      <div style="font-size:15px;color:var(--color-neutral-400);line-height:1.5;">Every gram added to the empty structure is a gram taken from payload; this table is the budget that keeps the design honest against its 5 kg payload promise.</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Result" data-speaker-notes="Close with the outcome of the process, then a condensed reference list and thanks." style="padding:110px 150px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(120% 100% at 85% 15%, #1c1f33 0%, var(--color-bg) 55%);">
+  <div class="kicker">06 — Result</div>
+  <h2 style="font-size:50px;max-width:1300px;margin-bottom:24px;">A stable, high-payload airframe, validated end to end.</h2>
+  <p style="font-size:21px;color:var(--color-neutral-300);max-width:1250px;line-height:1.6;margin-bottom:56px;">Research into dihedral wings led to an airfoil, wing, fuselage, tail, and propulsion set that was modeled, simulated, and weight-validated as one coherent system — closing the loop from the original design brief to a build-ready aircraft.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;border-top:1px solid var(--color-divider);padding-top:44px;">
+    <div>
+      <h4 style="color:var(--color-neutral-400);text-transform:uppercase;letter-spacing:.1em;font-size:15px;margin-bottom:18px;">Selected References</h4>
+      <p style="font-size:16px;color:var(--color-neutral-400);line-height:1.7;">D. P. Raymer, <em>Aircraft Design: A Conceptual Approach</em>, 6th ed. · J. Anderson, <em>Fundamentals of Aerodynamics</em>, McGraw-Hill · Perkins &amp; Hage, <em>Airplane Performance, Stability and Control</em>, Wiley · Andy Lennon, <em>Basics of R/C Model Aircraft Design</em>, Air Age Media</p>
+    </div>
+    <div style="display:flex;align-items:flex-end;justify-content:flex-end;">
+      <span style="font-size:32px;color:var(--color-text);">Thank you.</span>
+    </div>
+  </div>
+</section>
+
+</x-import>
+
+</x-dc>
+</body>
+</html>
