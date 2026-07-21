@@ -17,6 +17,27 @@
   *{scrollbar-width:none;-ms-overflow-style:none;}
   *::-webkit-scrollbar{width:0;height:0;display:none;}
   .om-nav-item{position:relative;}
+
+  .om-nav-item{position:relative;}
+  @media (max-width: 980px){
+    .om-nav{ width:auto !important; height:auto !important; }
+  }
+  @media (max-width: 860px){
+    .om-nav{ padding:6px !important; gap:2px !important; }
+    .om-nav-item{ padding:7px 10px !important; }
+    .om-nav-item span{ font-size:12px !important; }
+    .om-nav-item svg{ width:15px !important; height:15px !important; }
+  }
+  @media (max-width: 600px){
+    .om-nav{ width:auto !important; height:auto !important; max-width:94vw !important; border-radius:20px !important; flex-wrap:nowrap !important; overflow-x:auto !important; justify-content:flex-start !important; -webkit-overflow-scrolling:touch; }
+    .om-nav::-webkit-scrollbar{ display:none; }
+    .om-nav-item span{ display:none !important; }
+    .om-nav-item{ padding:9px !important; flex:none !important; }
+  }
+  @media (max-width: 640px){
+    .om-hero h1{ font-size:clamp(28px,8.5vw,40px) !important; line-height:1.18 !important; }
+    .om-hero p{ font-size:14.5px !important; }
+  }
 </style>
 </helmet>
 <div style="position:relative;width:100%;height:100vh;min-height:680px;overflow:hidden;background:#0b0d14;font-family:'Inter',sans-serif;color:#fff;">
@@ -26,7 +47,7 @@
   
 
   <!-- Nav -->
-  <nav style="position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; padding: 7px; background: rgba(18,20,30,0.78); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.18); border-radius: 100px; box-shadow: 0 12px 34px rgba(0,0,0,0.45); max-width: min(1400px,97vw); width: 947px; height: 42px;">
+  <nav class="om-nav" style="position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px; padding: 7px; background: rgba(18,20,30,0.78); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); border: 1px solid rgba(255,255,255,0.18); border-radius: 100px; box-shadow: 0 12px 34px rgba(0,0,0,0.45); max-width: min(1400px,97vw); width: 947px; height: 42px;">
     <a href="Landing Page.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:16px;background:#2f6bff;box-shadow:0 6px 16px rgba(47,107,255,0.5);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"></path></svg><span style="font-size:13.5px;font-weight:600;color:#fff;white-space:nowrap;">Home</span></a>
     <div class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;;opacity:0.6;cursor:default;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Experience</span></div>
     <a href="Projects.dc.html" class="om-nav-item" style="display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:16px;color:rgba(255,255,255,0.78);font-size:13.5px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"></path></svg><span style="font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.78);white-space:nowrap;">Projects</span></a>
@@ -38,7 +59,13 @@
   </nav>
 
   <!-- Left hero content (no panel box) -->
-  <div style="position: absolute; left: clamp(28px,5vw,72px); top: 87px; z-index: 4; width: min(560px,50vw); display: flex; flex-direction: column; gap: 22px; padding: 40px 44px 44px; margin-left:-14px; border-radius: 32px; background: linear-gradient(115deg, rgba(9,11,19,0.82) 0%, rgba(9,11,19,0.66) 48%, rgba(9,11,19,0.28) 78%, rgba(9,11,19,0) 100%); -webkit-mask-image: linear-gradient(115deg, #000 62%, transparent 100%); mask-image: linear-gradient(115deg, #000 62%, transparent 100%);">
+  <!-- Bottom scrim: keeps the hero legible without boxing the video -->
+  <div style="position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to top, rgba(6,8,14,0.92) 0%, rgba(6,8,14,0.6) 26%, rgba(6,8,14,0.12) 52%, transparent 68%);"></div>
+
+  <!-- Hero content: bottom-anchored, no panel box -->
+  <div class="om-hero" style="position:absolute;left:clamp(20px,6vw,80px);right:clamp(20px,6vw,80px);bottom:clamp(48px,9vh,96px);z-index:4;display:flex;align-items:flex-start;gap:22px;">
+    <div style="flex:none;width:3px;align-self:stretch;border-radius:2px;background:linear-gradient(to bottom, transparent, rgba(63,125,255,0.9) 20%, rgba(63,125,255,0.9) 80%, transparent);"></div>
+    <div style="display:flex;flex-direction:column;gap:clamp(14px,2vw,20px);max-width:560px;">
     <div style="display:inline-flex;align-items:center;gap:10px;width:fit-content;background:rgba(20,24,38,0.55);border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:8px 18px 8px 9px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);">
       <span style="display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;background:rgba(63,125,255,0.28);color:#8fb3ff;">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"></path></svg>
@@ -46,15 +73,14 @@
       <span style="font-size:14px;font-weight:600;color:#fff;letter-spacing:0.01em;">Hi, I'm</span>
     </div>
 
-    <h1 style="margin:0;font-size:clamp(40px,6vw,72px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;text-shadow:0 4px 30px rgba(0,0,0,0.55);">
+    <h1 style="margin:0;font-size:clamp(40px,6vw,72px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;text-shadow:0 4px 30px rgba(0,0,0,0.65);">
       <span style="color:#3f7dff;">Product Designer</span><br>
       <span style="color:#fff;">Business Analyst</span><br>
       <span style="color:#fff;">&amp; Data Analyst</span>
     </h1>
 
-    <p style="margin:0;font-size:clamp(16px,1.7vw,19px);line-height:1.55;color:rgba(255,255,255,0.82);max-width:440px;text-shadow:0 2px 14px rgba(0,0,0,0.6);">Turning data into insights and insights into impact.</p>
-
-    
+    <p style="margin:0;font-size:clamp(15px,1.7vw,19px);line-height:1.55;color:rgba(255,255,255,0.85);max-width:440px;text-shadow:0 2px 14px rgba(0,0,0,0.7);">Turning data into insights and insights into impact.</p>
+    </div>
   </div>
 </div>
 
@@ -96,6 +122,8 @@ class Component extends DCLogic {
     // Fetch as a blob and hand the element an object URL — some serve
     // endpoints don't support the byte-range requests browsers issue
     // for direct <source> video loads, which stalls readyState at 0.
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) el.querySelector('source').src = 'uploads/Animate_ONLY_the_provided_refe (3).mp4';
     const src = el.querySelector('source').src;
     fetch(src).then((r) => r.blob()).then((blob) => {
       const url = URL.createObjectURL(blob);
